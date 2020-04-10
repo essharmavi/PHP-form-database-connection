@@ -1,6 +1,5 @@
 <?php
-	// Show PHP version
-	echo "Current PHP version: " . phpversion() .  "\n";
+
 
 	// Connect to database
 	$conn = mysqli_connect("localhost","vishal","vishal","useraccounts") or die(" Connection Error " . mysqli_error($conn));
