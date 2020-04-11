@@ -26,11 +26,23 @@
     <label for="psw-repeat"><b>Confirm Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
     
-    <button type="submit" class="registerbtn">Register</button>
+    <button type="submit" class="registerbtn" onclick="return Validate()">Register</button>
   </div>
 
   <div class="container signin">
   </div>
 </form>
+  
+ <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("psw").value;
+        var confirmPassword = document.getElementById("psw-repeat").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
 </body>
 </html>
